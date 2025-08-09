@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="width: 300px;">
+        <h4 class="text-center mb-3">تسجيل الدخول</h4>
+        <input type="password" id="password" class="form-control mb-3" placeholder="أدخل كلمة المرور">
+        <button class="btn btn-primary w-100" onclick="login()">دخول</button>
+    </div>
+
+    <script>
+        // كلمة المرور الثابتة داخل الكود
+        const correctPassword = "12345"; // يمكنك تغييرها
+
+        function login() {
+            const inputPassword = document.getElementById("password").value;
+            if (inputPassword === correctPassword) {
+                // حفظ حالة الدخول في LocalStorage
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "dashboard.html";
+            } else {
+                alert("كلمة المرور خاطئة!");
+            }
+        }
+    </script>
+</body>
+</html>
