@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <title>إعادة التوجيه</title>
   <script>
-    window.location.replace("login.html");
+    // تأخير 1 ثانية قبل إعادة التوجيه للتأكد
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1000);
   </script>
 </head>
 <body>
